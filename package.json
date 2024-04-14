@@ -1,0 +1,21 @@
+{
+  "name": "books_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --watch index"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.19.2",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "autocannon": "^7.15.0"
+  }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book List</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <main>
+      <div class="wrapper">
+        <% if (quote) { %>
+        <div class="quote">
+          <p>This is a random advice from an API:</p>
+          <blockquote>
+            <p><%= quote %></p>
+          </blockquote>
+        </div>
+        <% } %>
+
+        <h1>Book List</h1>
+        <ul class="cards">
+          <% books.forEach(book => { %>
+          <li class="card">
+            <h2><%= book.title %></h2>
+            <p>Authors: <%= book.authors %></p>
+            <p>Categories: <%= book.categories %></p>
+            <p>Published Year: <%= book.published_year %></p>
+            <p>ISBN-13: <%= book.isbn13 %></p>
+            <p>ISBN-10: <%= book.isbn10 %></p>
+            <p>Average Rating: <%= book.average_rating %></p>
+            <p>Number of Pages: <%= book.num_pages %></p>
+            <p>Page Size Category: <%= book.pageSizeCategory %></p>
+
+            <p>Ratings Count: <%= book.ratings_count %></p>
+            <img src="<%= book.thumbnail %>" alt="Thumbnail" />
+          </li>
+          <% }); %>
+        </ul>
+      </div>
+    </main>
+  </body>
+</html>
